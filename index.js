@@ -3,6 +3,10 @@ const express = require('express');
 const app = express();
 app.disable('x-powered-by'); // information exporure disable x powered by
 const mysql = require('mysql2');
+const dotenv = require('dotenv');
+const sqlpassword = process.env.password;
+
+
 /**
  
 
@@ -19,7 +23,7 @@ const mysql = require('mysql2');
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '',// hard coded passwords unsafe use env
+    password: sqlpassword,// hard coded passwords unsafe use env
     database: 'shoppingdatabase'
 
 });
