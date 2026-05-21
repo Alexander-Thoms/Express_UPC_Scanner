@@ -4,7 +4,8 @@ const app = express();
 app.disable('x-powered-by'); // information exporure disable x powered by
 const mysql = require('mysql2');
 const dotenv = require('dotenv');
-const sqlpassword = process.env.password;
+dotenv.config();
+const sqlpassword = process.env.sqlpassword;
 const apipassword = process.env.apikey;
 
 
@@ -260,7 +261,7 @@ app.post('/lookup', async(req,res)=>{
     `);
    
   
-	
+    
 });
     });
   
