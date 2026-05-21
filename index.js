@@ -5,6 +5,7 @@ app.disable('x-powered-by'); // information exporure disable x powered by
 const mysql = require('mysql2');
 const dotenv = require('dotenv');
 const sqlpassword = process.env.password;
+const apipassword = process.env.apikey;
 
 
 /**
@@ -185,7 +186,7 @@ app.post('/lookup', async(req,res)=>{
     const options = {
   method: 'GET',
   headers: {
-    'x-rapidapi-key': 'effcf28ec4msh408c10f13a68dcdp1836b1jsnc602376e95f5',
+    'x-rapidapi-key': apipassword,
     'x-rapidapi-host': 'barcode-spider.p.rapidapi.com'
   }
 };
